@@ -584,7 +584,7 @@ class DecodingTask:
                 else prefix
             )
             if self.sample_len is not None:
-                max_prefix_len = self.n_ctx // 2 - self.sample_len
+                max_prefix_len = self.sample_len
                 prefix_tokens = prefix_tokens[-max_prefix_len:]
             tokens = tokens + prefix_tokens
 
